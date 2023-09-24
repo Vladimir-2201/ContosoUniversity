@@ -34,8 +34,8 @@
                 <span asp-validation-for="OfficeAssignment.Location" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <div class="col-md-2 col-md-10">
-                    <table>
+                <div>
+                    <table class="text-nowrap">
                         <tr>
                             @{
                                 int cnt = 0;
@@ -46,7 +46,7 @@
                                     {
                                         @:</tr><tr>
                                     }
-                                    @:<td>
+                                    @:<td class="ps-3">
                                         <input type="checkbox"
                                                 name="selectedCourses"
                                                 value="@course.CourseID"
