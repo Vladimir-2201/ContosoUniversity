@@ -4,7 +4,6 @@ using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using ContosoUniversity.Data;
 using ContosoUniversity.Models.SchoolViewModels;
-using Microsoft.Extensions.Logging;
 
 namespace ContosoUniversity.Controllers
 {
@@ -35,11 +34,6 @@ namespace ContosoUniversity.Controllers
                     StudentCount = dateGroup.Count()
                 };
             return View(await data.AsNoTracking().ToListAsync());
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
