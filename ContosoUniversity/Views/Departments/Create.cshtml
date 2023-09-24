@@ -29,7 +29,9 @@
             </div>
             <div class="mb-3">
                 <label asp-for="InstructorID" class="control-label"></label>
-                <select asp-for="InstructorID" class ="form-control" asp-items="ViewBag.InstructorID"></select>
+                <select asp-for="InstructorID" class ="form-control" asp-items="ViewBag.InstructorID">
+                    <option value="">-- Select Administrator --</option>
+                </select>
             </div>
             <div class="mb-3">
                 <input type="submit" value="Create" class="btn btn-primary" />
