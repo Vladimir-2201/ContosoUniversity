@@ -7,6 +7,7 @@ namespace ContosoUniversity.Data
     {
         public SchoolContext(DbContextOptions<SchoolContext> options) : base(options) 
         {
+           Database.Migrate();
         }
 
         public DbSet<Course> Courses { get; set; }
